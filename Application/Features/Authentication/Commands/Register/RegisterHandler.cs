@@ -14,6 +14,7 @@ using Shared.ResultPattern;
 
 namespace Application.Features.Authentication.Commands.Register
 {
+    #region RegisterHandler
     public class RegisterHandler : IRequestHandler<RegisterCommand, Result<RegisterResponse>>
     {
         private readonly UserManager<ApplicationUser> _userManager;
@@ -51,4 +52,5 @@ namespace Application.Features.Authentication.Commands.Register
             };
         }
     }
+    #endregion
 }
