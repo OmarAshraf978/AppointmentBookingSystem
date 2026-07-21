@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Domain.Entities.Modules
 {
+    #region ReviewModule
     public class Review
     {
         public int Id { get; set; }
@@ -17,4 +18,5 @@ namespace Domain.Entities.Modules
         public Service Service { get; set; } = null!;
         public bool IsDeleted { get; set; }
     }
+    #endregion
 }
