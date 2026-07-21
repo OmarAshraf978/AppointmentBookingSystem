@@ -12,6 +12,7 @@ using Shared.ResultPattern;
 
 namespace Application.Features.Services.Commands.CreateService
 {
+    #region CreateServiceHandler
     public class CreateServiceHandler : IRequestHandler<CreateServiceCommand, Result<CreateServiceResponse>>
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -34,4 +35,5 @@ namespace Application.Features.Services.Commands.CreateService
             return serviceResponse;
         }
     }
+    #endregion
 }
