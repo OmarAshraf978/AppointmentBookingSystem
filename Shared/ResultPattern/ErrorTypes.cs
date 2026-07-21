@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Shared.ResultPattern
 {
+    #region ErrorTypesResultPattern
     public enum ErrorTypes
     {
         Failure = 0,
@@ -15,4 +16,5 @@ namespace Shared.ResultPattern
         Forbidden = 4,
         InvalidCredentials = 5
     }
+    #endregion
 }
