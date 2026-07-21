@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace Application.Features.Reviews.Outputs
 {
+    #region DeleteReviewResponse
     public class DeleteReviewResponse
     {
         public string Message { get; set; } = null!;
     }
+    #endregion
 }
