@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Shared.ResultPattern
 {
+    #region Result
     public class Result
     {
         private readonly List<Error> _errors = [];
@@ -33,4 +34,5 @@ namespace Shared.ResultPattern
         public static implicit operator Result<TValue>(TValue value) => Ok(value);
         public static implicit operator Result<TValue>(Error error) => Fail(error);
     }
+    #endregion
 }
