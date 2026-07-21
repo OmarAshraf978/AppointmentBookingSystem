@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Domain.Entities.Modules
 {
+    #region AppointmentModule
     public class Appointment
     {
         public int Id { get; set; }
@@ -15,4 +16,5 @@ namespace Domain.Entities.Modules
         public int ServiceId { get; set; }
         public Service Service { get; set; } = default!;
     }
+    #endregion
 }
