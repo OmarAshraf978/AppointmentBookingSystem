@@ -7,8 +7,10 @@ using Domain.Entities.IdentityModule;
 
 namespace Application.Interfaces
 {
+    #region IJwtProvider
     public interface IJwtProvider
     {
         public Task<String> GenerateTokenAsync(ApplicationUser applicationUser);
     }
+    #endregion
 }
