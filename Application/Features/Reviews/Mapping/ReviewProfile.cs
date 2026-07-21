@@ -10,6 +10,7 @@ using Domain.Entities.Modules;
 
 namespace Application.Features.Reviews.Mapping
 {
+    #region ReviewProfile
     public class ReviewProfile : Profile
     {
         public ReviewProfile()
@@ -22,4 +23,5 @@ namespace Application.Features.Reviews.Mapping
                      .ForMember(dest => dest.ServiceName, opt => opt.MapFrom(src => src.Service.Name));
         }
     }
+    #endregion
 }
