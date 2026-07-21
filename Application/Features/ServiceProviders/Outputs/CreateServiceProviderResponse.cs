@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Application.Features.ServiceProviders.Outputs
 {
+    #region CreateServiceProviderResponse
     public class CreateServiceProviderResponse
     {
         public string BusinessName { get; set; } = default!;
@@ -16,4 +17,5 @@ namespace Application.Features.ServiceProviders.Outputs
         public double Longitude { get; set; }
         public bool IsApproved { get; set; }
     }
+    #endregion
 }
