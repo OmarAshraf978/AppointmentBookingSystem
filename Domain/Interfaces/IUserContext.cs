@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace Domain.Interfaces
 {
+    #region IUserContext
     public interface IUserContext
     {
         public string UserId { get; }
         public string Role {  get; }
     }
+    #endregion
 }
