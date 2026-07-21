@@ -13,6 +13,7 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace Persistence.IdentityData.ImplementInterfaces
 {
+    #region JwtProvider
     public class JwtProvider : IJwtProvider
     {
         private readonly IConfiguration _configuration;
@@ -49,4 +50,5 @@ namespace Persistence.IdentityData.ImplementInterfaces
             return new JwtSecurityTokenHandler().WriteToken(Token);
         }
     }
+    #endregion
 }
