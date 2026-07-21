@@ -7,6 +7,7 @@ using Domain.Entities.Modules;
 
 namespace Application.Features.Appointments.Outputs
 {
+    #region GetMyAppointmentsResponse
     public class GetMyAppointmentsResponse
     {
         public int Id { get; set; }
@@ -15,4 +16,5 @@ namespace Application.Features.Appointments.Outputs
         public string ServiceName { get; set; } = null!;
         public string ServiceProviderName { get; set; } = null!;
     }
+    #endregion
 }
