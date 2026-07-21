@@ -11,6 +11,7 @@ using Shared.ResultPattern;
 
 namespace Application.Features.Appointments.Commands.RejectAppointment
 {
+    #region RejectAppointmentHandler
     public class RejectAppointmentHandler : IRequestHandler<RejectAppointmentCommand, Result<StateResponse>>
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -42,4 +43,5 @@ namespace Application.Features.Appointments.Commands.RejectAppointment
             return new StateResponse { Message = "Appointment Rejected Successfully" };
         }
     }
+    #endregion
 }
