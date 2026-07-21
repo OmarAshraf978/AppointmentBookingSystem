@@ -10,6 +10,7 @@ using Shared.ResultPattern;
 
 namespace Application.Features.Services.Commands.DeleteService
 {
+    #region DeleteServiceCommand
     public class DeleteServiceCommand : IRequest<Result<DeleteServiceResponse>>
     {
         public int Id { get; set; }
@@ -18,4 +19,5 @@ namespace Application.Features.Services.Commands.DeleteService
             Id = id;
         }
     }
+    #endregion
 }
