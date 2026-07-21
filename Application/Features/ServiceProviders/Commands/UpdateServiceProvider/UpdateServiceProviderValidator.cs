@@ -7,6 +7,7 @@ using FluentValidation;
 
 namespace Application.Features.ServiceProviders.Commands.UpdateServiceProvider
 {
+    #region UpdateServiceProviderValidator
     public class UpdateServiceProviderValidator : AbstractValidator<UpdateServiceProviderCommand>
     {
         public UpdateServiceProviderValidator()
@@ -19,4 +20,5 @@ namespace Application.Features.ServiceProviders.Commands.UpdateServiceProvider
             RuleFor(x => x.Longitude).InclusiveBetween(-180, 180);
         }
     }
+    #endregion
 }
