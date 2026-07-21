@@ -11,6 +11,7 @@ using Domain.Entities.Modules;
 
 namespace Application.Features.Services.Mapping
 {
+    #region ServiceProfile
     public class ServiceProfile : Profile
     {
         public ServiceProfile()
@@ -29,4 +30,5 @@ namespace Application.Features.Services.Mapping
                   .ForMember(dest => dest.Name, otp => otp.MapFrom(src => src.ServiceName));
         }
     }
+    #endregion
 }
