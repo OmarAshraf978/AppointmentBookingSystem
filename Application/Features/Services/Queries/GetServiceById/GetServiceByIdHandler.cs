@@ -12,6 +12,7 @@ using Shared.ResultPattern;
 
 namespace Application.Features.Services.Queries.GetServiceById
 {
+    #region GetServiceByIdHandler
     public class GetServiceByIdHandler : IRequestHandler<GetServiceByIdQuery, Result<GetServiceByIdResponse>>
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -30,4 +31,5 @@ namespace Application.Features.Services.Queries.GetServiceById
             return _mapper.Map<GetServiceByIdResponse>(service);
         }
     }
+    #endregion
 }
