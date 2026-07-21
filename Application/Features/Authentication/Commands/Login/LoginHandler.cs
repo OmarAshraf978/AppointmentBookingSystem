@@ -12,6 +12,7 @@ using Shared.ResultPattern;
 
 namespace Application.Features.Authentication.Commands.Login
 {
+    #region LoginHandler
     public class LoginHandler : IRequestHandler<LoginCommand, Result<LoginResponse>>
     {
         private readonly UserManager<ApplicationUser> _userManager;
@@ -39,4 +40,5 @@ namespace Application.Features.Authentication.Commands.Login
             };
         }
     }
+    #endregion
 }
