@@ -9,6 +9,7 @@ using Shared.ResultPattern;
 
 namespace Application.Features.Services.Queries.GetServiceById
 {
+    #region GetServiceByIdQuery
     public class GetServiceByIdQuery : IRequest<Result<GetServiceByIdResponse>>
     {
         public int Id { get; set; }
@@ -17,4 +18,5 @@ namespace Application.Features.Services.Queries.GetServiceById
             Id = id;
         }
     }
+    #endregion
 }
