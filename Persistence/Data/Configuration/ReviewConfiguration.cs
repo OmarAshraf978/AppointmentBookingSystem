@@ -9,6 +9,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Persistence.Data.Configuration
 {
+    #region ReviewConfiguration
     public class ReviewConfiguration : IEntityTypeConfiguration<Review>
     {
         public void Configure(EntityTypeBuilder<Review> builder)
@@ -23,4 +24,5 @@ namespace Persistence.Data.Configuration
                    .HasForeignKey(x => x.ServiceId);
         }
     }
+    #endregion
 }
