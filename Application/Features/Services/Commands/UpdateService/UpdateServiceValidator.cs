@@ -7,6 +7,7 @@ using FluentValidation;
 
 namespace Application.Features.Services.Commands.UpdateService
 {
+    #region UpdateServiceValidator
     public class UpdateServiceValidator : AbstractValidator<UpdateServiceCommand>
     {
         public UpdateServiceValidator()
@@ -17,4 +18,5 @@ namespace Application.Features.Services.Commands.UpdateService
             RuleFor(x => x.Price).NotEmpty().GreaterThan(0);
         }
     }
+    #endregion
 }
