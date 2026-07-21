@@ -12,6 +12,7 @@ using Shared.ResultPattern;
 
 namespace Application.Features.Services.Commands.UpdateService
 {
+    #region UpdateServiceHandler
     public class UpdateServiceHandler : IRequestHandler<UpdateServiceCommand, Result<UpdateServiceResponse>>
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -35,4 +36,5 @@ namespace Application.Features.Services.Commands.UpdateService
             return _mapper.Map<UpdateServiceResponse>(service);
         }
     }
+    #endregion
 }
