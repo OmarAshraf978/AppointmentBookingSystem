@@ -13,6 +13,7 @@ using Shared.ResultPattern;
 
 namespace Application.Features.Reviews.Commands.CreateReview
 {
+    #region CreateReviewHandler
     public class CreateReviewHandler : IRequestHandler<CreateReviewCommand, Result<CreateReviewResponse>>
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -53,4 +54,5 @@ namespace Application.Features.Reviews.Commands.CreateReview
             return _mapper.Map<CreateReviewResponse>(review);
         }
     }
+    #endregion
 }
