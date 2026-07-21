@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 namespace Persistence.IdentityData.DbContexts
 {
+    #region AppointmentIdentityDbContext
     public class AppointmentIdentityDbContext : IdentityDbContext<ApplicationUser>
     {
         public AppointmentIdentityDbContext(DbContextOptions<AppointmentIdentityDbContext> options) : base(options)
@@ -28,4 +29,5 @@ namespace Persistence.IdentityData.DbContexts
                    .HasForeignKey<Address>(a => a.UserId);
         }
     }
+    #endregion
 }
