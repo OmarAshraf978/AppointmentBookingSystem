@@ -10,6 +10,7 @@ using Domain.Entities.Modules;
 
 namespace Application.Features.Appointments.Mapping
 {
+    #region AppointmentProfile
     public class AppointmentProfile : Profile
     {
         public AppointmentProfile()
@@ -31,5 +32,6 @@ namespace Application.Features.Appointments.Mapping
                      .ForMember(dest => dest.BusinessName, opt => opt.MapFrom(src => src.Service.ServiceProvider.BusinessName))
                      .ForMember(dest => dest.Address, opt => opt.MapFrom(src => src.Service.ServiceProvider.Address));
         }
+        #region
     }
 }
