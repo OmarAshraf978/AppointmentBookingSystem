@@ -7,6 +7,7 @@ using FluentValidation;
 
 namespace Application.Features.Authentication.Commands.Register
 {
+    #region RegisterValidator
     public class RegisterValidator : AbstractValidator<RegisterCommand>
     {
         public RegisterValidator()
@@ -23,4 +24,5 @@ namespace Application.Features.Authentication.Commands.Register
             RuleFor(x => x.LastName).NotEmpty();
         }
     }
+    #endregion
 }
