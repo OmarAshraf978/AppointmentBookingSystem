@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Application.Features.Services.Outputs
 {
+    #region CreateServiceResponse
     public class CreateServiceResponse
     {
         public string ServiceName { get; set; } = null!;
@@ -14,4 +15,5 @@ namespace Application.Features.Services.Outputs
         public int DurationInMinutes { get; set; }
         public int ServiceProviderId { get; set; }
     }
+    #endregion
 }
