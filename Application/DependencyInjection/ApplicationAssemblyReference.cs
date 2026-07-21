@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Application.DependencyInjection
 {
+    #region ApplicationAssemblyReference
     public sealed class ApplicationAssemblyReference
     {
     }
+    #endregion
 }
