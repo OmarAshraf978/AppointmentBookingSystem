@@ -9,7 +9,9 @@ using Shared.ResultPattern;
 
 namespace Application.Features.ServiceProviders.Queries.GetAllServiceProvider
 {
+    #region GetAllServiceProvidersQuery
     public class GetAllServiceProvidersQuery : IRequest<Result<IEnumerable<GetAllServiceProvidersResponse>>>
     {
     }
+    #endregion
 }
