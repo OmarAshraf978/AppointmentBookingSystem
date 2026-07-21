@@ -7,6 +7,7 @@ using FluentValidation;
 
 namespace Application.Features.Services.Commands.CreateService
 {
+    #region CreateServiceValidator
     public class CreateServiceValidator : AbstractValidator<CreateServiceCommand>
     {
         public CreateServiceValidator()
@@ -18,4 +19,5 @@ namespace Application.Features.Services.Commands.CreateService
             RuleFor(x => x.ServiceProviderId).NotEmpty().GreaterThan(0);
         }
     }
+    #endregion
 }
