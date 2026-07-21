@@ -7,8 +7,10 @@ using System.Threading.Tasks;
 
 namespace Application.Features.Services.Outputs
 {
+    #region DeleteServiceResponse
     public class DeleteServiceResponse
     {
         public string Message { get; set; } = null!;
     }
+    #endregion
 }
