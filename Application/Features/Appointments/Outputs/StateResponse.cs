@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace Application.Features.Appointments.Outputs
 {
+    #region StateResponse
     public class StateResponse
     {
         public string Message { get; set; } = null!;
     }
+    #endregion
 }
