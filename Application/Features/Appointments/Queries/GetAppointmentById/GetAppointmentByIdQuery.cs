@@ -9,6 +9,7 @@ using Shared.ResultPattern;
 
 namespace Application.Features.Appointments.Queries.GetAppointmentById
 {
+    #region GetAppointmentByIdQuery
     public class GetAppointmentByIdQuery : IRequest<Result<GetAppointmentByIdResponse>>
     {
         public int Id { get; set; }
@@ -17,4 +18,5 @@ namespace Application.Features.Appointments.Queries.GetAppointmentById
             Id = id;
         }
     }
+    #endregion
 }
