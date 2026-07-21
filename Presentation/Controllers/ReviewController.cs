@@ -14,6 +14,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Presentation.Controllers
 {
+    #region ReviewController
     public class ReviewController : ApiBaseController
     {
         private readonly IMediator _mediator;
@@ -55,4 +56,5 @@ namespace Presentation.Controllers
             return HandleResult(Result);
         }
     }
+    #endregion
 }
