@@ -12,6 +12,7 @@ using Shared.ResultPattern;
 
 namespace Application.Features.Services.Queries.GetAllServices
 {
+    #region GetAllServicesHandler
     public class GetAllServicesHandler : IRequestHandler<GetAllServicesQuery, Result<IEnumerable<GetAllServicesResponse>>>
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -32,4 +33,5 @@ namespace Application.Features.Services.Queries.GetAllServices
             return Result<IEnumerable<GetAllServicesResponse>>.Ok(response);
         }
     }
+    #endregion
 }
