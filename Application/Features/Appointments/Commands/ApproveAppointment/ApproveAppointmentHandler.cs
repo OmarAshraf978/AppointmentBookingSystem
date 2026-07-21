@@ -12,6 +12,7 @@ using Shared.ResultPattern;
 
 namespace Application.Features.Appointments.Commands.ApproveAppointment
 {
+    #region ApproveAppointmentHandler
     public class ApproveAppointmentHandler : IRequestHandler<ApproveAppointmentCommand, Result<StateResponse>>
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -43,4 +44,5 @@ namespace Application.Features.Appointments.Commands.ApproveAppointment
             return new StateResponse { Message = "Appointment Approved Successfully" };
         }
     }
+    #endregion
 }
