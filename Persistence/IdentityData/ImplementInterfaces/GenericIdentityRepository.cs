@@ -10,6 +10,7 @@ using Persistence.IdentityData.DbContexts;
 
 namespace Persistence.IdentityData.ImplementInterfaces
 {
+    #region GenericIdentityRepository
     public class GenericIdentityRepository<TEntity, TKey> : IGenericIdentityRepository<TEntity, TKey> where TEntity : class
     {
         private readonly AppointmentIdentityDbContext _dbContext;
@@ -33,4 +34,5 @@ namespace Persistence.IdentityData.ImplementInterfaces
         public void Update(TEntity entity)
         => _dbContext.Set<TEntity>().Update(entity);
     }
+    #endregion
 }
