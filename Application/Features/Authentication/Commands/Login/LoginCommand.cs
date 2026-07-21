@@ -9,9 +9,11 @@ using Shared.ResultPattern;
 
 namespace Application.Features.Authentication.Commands.Login
 {
+    #region LoginCommand
     public class LoginCommand : IRequest<Result<LoginResponse>>
     {
         public string Email { get; set; } = null!;
         public string Password { get; set; } = null!;
     }
+    #endregion
 }
