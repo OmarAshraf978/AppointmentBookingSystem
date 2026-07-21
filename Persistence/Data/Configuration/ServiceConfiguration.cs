@@ -9,6 +9,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Persistence.Data.Configuration
 {
+    #region ServiceConfiguration
     public class ServiceConfiguration : IEntityTypeConfiguration<Service>
     {
         public void Configure(EntityTypeBuilder<Service> builder)
@@ -18,4 +19,5 @@ namespace Persistence.Data.Configuration
             builder.Property(x => x.Description).HasMaxLength(100);
         }
     }
+    #endregion
 }
