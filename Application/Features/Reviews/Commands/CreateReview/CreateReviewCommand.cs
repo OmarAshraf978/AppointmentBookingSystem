@@ -10,10 +10,12 @@ using Shared.ResultPattern;
 
 namespace Application.Features.Reviews.Commands.CreateReview
 {
+    #region CreateReviewCommand
     public class CreateReviewCommand : IRequest<Result<CreateReviewResponse>>
     {
         public int Rating { get; set; }
         public string Comment { get; set; } = null!;
         public int ServiceId { get; set; }
     }
+    #endregion
 }
