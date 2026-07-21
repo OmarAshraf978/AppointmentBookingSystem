@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Domain.Entities.IdentityModule
 {
+    #region AddressModule
     public class Address
     {
         public int Id { get; set; }
@@ -17,4 +18,5 @@ namespace Domain.Entities.IdentityModule
         public string UserId { get; set; } = default!;
         public ApplicationUser ApplicationUser { get; set; } = default!;
     }
+    #endregion
 }
