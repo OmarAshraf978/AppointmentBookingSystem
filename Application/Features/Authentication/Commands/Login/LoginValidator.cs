@@ -7,6 +7,7 @@ using FluentValidation;
 
 namespace Application.Features.Authentication.Commands.Login
 {
+    #region LoginValidator
     public class LoginValidator : AbstractValidator<LoginCommand>
     {
         public LoginValidator() 
@@ -15,4 +16,5 @@ namespace Application.Features.Authentication.Commands.Login
             RuleFor(x => x.Password).NotEmpty();
         }
     }
+    #endregion
 }
