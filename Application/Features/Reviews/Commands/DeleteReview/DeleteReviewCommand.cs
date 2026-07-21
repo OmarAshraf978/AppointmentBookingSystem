@@ -9,6 +9,7 @@ using Shared.ResultPattern;
 
 namespace Application.Features.Reviews.Commands.DeleteReview
 {
+    #region DeleteReviewCommand
     public class DeleteReviewCommand : IRequest<Result<DeleteReviewResponse>>
     {
         public int Id { get; set; }
@@ -17,4 +18,5 @@ namespace Application.Features.Reviews.Commands.DeleteReview
             Id = id;
         }
     }
+    #endregion
 }
