@@ -11,6 +11,7 @@ using Shared.ResultPattern;
 
 namespace Application.Features.Services.Commands.DeleteService
 {
+    #region DeleteServiceHandler
     public class DeleteServiceHandler : IRequestHandler<DeleteServiceCommand, Result<DeleteServiceResponse>>
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -37,4 +38,5 @@ namespace Application.Features.Services.Commands.DeleteService
             };
         }
     }
+    #endregion
 }
