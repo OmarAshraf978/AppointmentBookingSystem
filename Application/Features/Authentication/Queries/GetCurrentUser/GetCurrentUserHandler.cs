@@ -13,6 +13,7 @@ using Shared.ResultPattern;
 
 namespace Application.Features.Authentication.Queries.GetCurrentUser
 {
+    #region GetCurrentUserHandler
     public class GetCurrentUserHandler : IRequestHandler<GetCurrentUserQuery, Result<GetCurrentUserResponse>>
     {
         private readonly UserManager<ApplicationUser> _userManager;
@@ -35,4 +36,5 @@ namespace Application.Features.Authentication.Queries.GetCurrentUser
             return _mapper.Map<GetCurrentUserResponse>(User);
         }
     }
+    #endregion
 }
