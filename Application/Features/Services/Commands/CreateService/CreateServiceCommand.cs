@@ -9,6 +9,7 @@ using Shared.ResultPattern;
 
 namespace Application.Features.Services.Commands.CreateService
 {
+    #region CreateServiceCommand
     public class CreateServiceCommand : IRequest<Result<CreateServiceResponse>>
     {
         public string ServiceName { get; set; } = null!;
@@ -17,4 +18,5 @@ namespace Application.Features.Services.Commands.CreateService
         public int DurationInMinutes { get; set; }
         public int ServiceProviderId { get; set; }
     }
+    #endregion
 }
