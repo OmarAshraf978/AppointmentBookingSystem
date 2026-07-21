@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Application.Features.Services.Outputs
 {
+    #region GetServiceByIdResponse
     public class GetServiceByIdResponse
     {
         public int Id { get; set; }
@@ -14,4 +15,5 @@ namespace Application.Features.Services.Outputs
         public double Price { get; set; }
         public int DurationInMinutes { get; set; }
     }
+    #endregion
 }
