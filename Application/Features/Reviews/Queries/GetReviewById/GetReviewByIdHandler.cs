@@ -12,6 +12,7 @@ using Shared.ResultPattern;
 
 namespace Application.Features.Reviews.Queries.GetReviewById
 {
+    #region GetReviewByIdHandler
     public class GetReviewByIdHandler : IRequestHandler<GetReviewByIdQuery, Result<GetReviewByIdResponse>>
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -44,4 +45,5 @@ namespace Application.Features.Reviews.Queries.GetReviewById
             return _mapper.Map<GetReviewByIdResponse>(review);
         }
     }
+    #endregion
 }
