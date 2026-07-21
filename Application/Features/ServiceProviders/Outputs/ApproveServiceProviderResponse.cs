@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace Application.Features.ServiceProviders.Outputs
 {
+    #region ApproveServiceProviderResponse
     public class ApproveServiceProviderResponse
     {
         public string Message { get; set; } = null!;
     }
+    #endregion
 }
