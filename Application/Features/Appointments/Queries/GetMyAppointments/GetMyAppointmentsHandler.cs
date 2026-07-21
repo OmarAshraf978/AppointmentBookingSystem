@@ -13,6 +13,7 @@ using Shared.ResultPattern;
 
 namespace Application.Features.Appointments.Queries.GetMyAppointments
 {
+    #region GetMyAppointmentsHandler
     public class GetMyAppointmentsHandler : IRequestHandler<GetMyAppointmentsQuery, Result<IEnumerable<GetMyAppointmentsResponse>>>
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -39,4 +40,5 @@ namespace Application.Features.Appointments.Queries.GetMyAppointments
             return Result<IEnumerable<GetMyAppointmentsResponse>>.Ok(response);
         }
     }
+    #endregion
 }
