@@ -7,6 +7,7 @@ using FluentValidation;
 
 namespace Application.Features.Authentication.Commands.ChangePassword
 {
+    #region ChangePasswordValidator
     public class ChangePasswordValidator : AbstractValidator<ChangePasswordCommand>
     {
         public ChangePasswordValidator()
@@ -16,4 +17,5 @@ namespace Application.Features.Authentication.Commands.ChangePassword
             RuleFor(x => x.ConfirmPassword).NotEmpty().Equal(x => x.NewPassword);
         }
     }
+    #endregion
 }
