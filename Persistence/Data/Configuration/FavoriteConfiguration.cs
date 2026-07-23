@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Persistence.Data.Configuration
 {
+    #region FavoriteConfiguration
     public class FavoriteConfiguration : IEntityTypeConfiguration<Favorite>
     {
         public void Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<Favorite> builder)
@@ -20,4 +21,5 @@ namespace Persistence.Data.Configuration
                    .HasForeignKey(x => x.ServiceId);
         }
     }
+    #endregion
 }
