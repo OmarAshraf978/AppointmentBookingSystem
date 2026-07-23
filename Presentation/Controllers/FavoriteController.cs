@@ -13,6 +13,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Presentation.Controllers
 {
+    #region FavoriteController
     public class FavoriteController : ApiBaseController
     {
         private readonly IMediator _mediator;
@@ -46,4 +47,5 @@ namespace Presentation.Controllers
             return HandleResult(Result);
         }
     }
+    #endregion
 }
