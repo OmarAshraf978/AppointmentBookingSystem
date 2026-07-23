@@ -9,6 +9,7 @@ using Shared.ResultPattern;
 
 namespace Application.Features.Favorites.Commands.RemoveFavorite
 {
+    #region RemoveFavoriteCommand
     public class RemoveFavoriteCommand : IRequest<Result<FavoriteResponse>>
     {
         public int ServiceId { get; set; }
@@ -17,4 +18,5 @@ namespace Application.Features.Favorites.Commands.RemoveFavorite
             ServiceId = id;
         }
     }
+    #endregion
 }
