@@ -12,7 +12,7 @@ using Shared.ResultPattern;
 
 namespace Application.Features.Favorites.Queries.GetMyFavorites
 {
-    #region GetMyFavoritesQuery
+    #region GetMyFavoritesHandler
     public class GetMyFavoritesHandler : IRequestHandler<GetMyFavoritesQuery, Result<IEnumerable<GetMyFavoritesResponse>>>
     {
         private readonly IUnitOfWork _unitOfWork;
