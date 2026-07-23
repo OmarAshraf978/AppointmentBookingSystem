@@ -144,6 +144,24 @@ Appointment Status:
 
 ---
 
+# Favorites Module
+
+### Features
+
+- Add Service To Favorites
+- Remove Service From Favorites
+- Get My Favorite Services
+
+### Favorite Rules
+
+- A user cannot add the same service to favorites more than once.
+- Duplicate favorites are prevented using a unique composite index on UserId and ServiceId.
+- Users can only remove their own favorite services.
+- Deleted services are excluded from the user's favorites.
+- User identity is linked through UserId across separate databases.
+
+---
+
 # Business Rules
 
 - Soft Delete supported.
