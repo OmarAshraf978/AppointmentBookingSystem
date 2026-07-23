@@ -9,6 +9,7 @@ using Shared.ResultPattern;
 
 namespace Application.Features.Favorites.Commands.AddFavorite
 {
+    #region AddFavoriteCommand
     public class AddFavoriteCommand : IRequest<Result<FavoriteResponse>>
     {
         public int ServiceId { get; set; }
@@ -17,4 +18,5 @@ namespace Application.Features.Favorites.Commands.AddFavorite
             ServiceId = id;
         }
     }
+    #endregion
 }
