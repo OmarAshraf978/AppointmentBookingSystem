@@ -9,7 +9,9 @@ using Shared.ResultPattern;
 
 namespace Application.Features.Favorites.Queries.GetMyFavorites
 {
+    #region GetMyFavoritesQuery
     public class GetMyFavoritesQuery : IRequest<Result<IEnumerable<GetMyFavoritesResponse>>>
     {
     }
+    #endregion
 }
