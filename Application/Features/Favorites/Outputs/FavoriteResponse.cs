@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace Application.Features.Favorites.Outputs
 {
+    #region FavoriteResponse
     public class FavoriteResponse
     {
         public string Message { get; set; } = null!;
     }
+    #endregion
 }
