@@ -11,6 +11,7 @@ using Shared.ResultPattern;
 
 namespace Application.Features.Favorites.Commands.RemoveFavorite
 {
+    #region RemoveFavoriteHandler
     public class RemoveFavoriteHandler : IRequestHandler<RemoveFavoriteCommand, Result<FavoriteResponse>>
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -37,4 +38,5 @@ namespace Application.Features.Favorites.Commands.RemoveFavorite
             return new FavoriteResponse { Message = "Favorite Removed Successfully" };
         }
     }
+    #endregion
 }
