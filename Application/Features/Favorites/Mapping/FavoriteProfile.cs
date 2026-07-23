@@ -9,6 +9,7 @@ using Domain.Entities.Modules;
 
 namespace Application.Features.Favorites.Mapping
 {
+    #region FavoriteProfile
     public class FavoriteProfile : Profile
     {
         public FavoriteProfile()
@@ -17,4 +18,5 @@ namespace Application.Features.Favorites.Mapping
                 .ForMember(dest => dest.ServiceName, opt => opt.MapFrom(src => src.Service.Name));
         }
     }
+    #endregion
 }
