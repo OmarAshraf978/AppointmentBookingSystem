@@ -11,6 +11,7 @@ using Shared.ResultPattern;
 
 namespace Application.Features.Favorites.Commands.AddFavorite
 {
+    #region AddFavoriteHandler
     public class AddFavoriteHandler : IRequestHandler<AddFavoriteCommand, Result<FavoriteResponse>>
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -50,4 +51,5 @@ namespace Application.Features.Favorites.Commands.AddFavorite
             return new FavoriteResponse { Message = "Favorite Added Successfully" };
         }
     }
+    #endregion
 }
