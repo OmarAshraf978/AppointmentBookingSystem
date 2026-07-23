@@ -24,6 +24,7 @@ namespace Persistence.Data.DbContexts
         public DbSet<ServiceProvider> ServiceProviders { get; set; }
         public DbSet<Appointment> Appointments { get; set; }
         public DbSet<Review> Reviews { get; set; }
+        public DbSet<Favorite> Favorites { get; set; }
     }
     #endregion
 }
