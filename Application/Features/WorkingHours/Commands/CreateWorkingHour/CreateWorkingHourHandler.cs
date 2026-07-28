@@ -12,6 +12,7 @@ using Shared.ResultPattern;
 
 namespace Application.Features.WorkingHours.Commands.CreateWorkingHour
 {
+    #region CreateWorkingHourHandler
     public class CreateWorkingHourHandler : IRequestHandler<CreateWorkingHourCommand, Result<CreateWorkingHourResponse>>
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -58,4 +59,5 @@ namespace Application.Features.WorkingHours.Commands.CreateWorkingHour
             return _mapper.Map<CreateWorkingHourResponse>(workingHour);
         }
     }
+    #endregion
 }
