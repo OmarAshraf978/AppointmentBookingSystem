@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Application.Features.WorkingHours.Outputs
 {
+    #region GetWorkingHoursByServiceProviderIdResponse
     public class GetWorkingHoursByServiceProviderIdResponse
     {
         public int Id { get; set; }
@@ -15,4 +16,5 @@ namespace Application.Features.WorkingHours.Outputs
         public int ServiceProviderId { get; set; }
         public string ServiceProviderName { get; set; } = null!;
     }
+    #endregion
 }
