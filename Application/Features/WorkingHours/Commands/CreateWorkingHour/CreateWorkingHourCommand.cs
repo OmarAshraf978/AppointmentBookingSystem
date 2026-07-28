@@ -9,6 +9,7 @@ using Shared.ResultPattern;
 
 namespace Application.Features.WorkingHours.Commands.CreateWorkingHour
 {
+    #region CreateWorkingHourCommand
     public class CreateWorkingHourCommand : IRequest<Result<CreateWorkingHourResponse>>
     {
         public DayOfWeek DayOfWeek { get; set; }
@@ -16,4 +17,5 @@ namespace Application.Features.WorkingHours.Commands.CreateWorkingHour
         public TimeSpan EndTime { get; set; }
         public int ServiceProviderId { get; set; }
     }
+    #endregion
 }
