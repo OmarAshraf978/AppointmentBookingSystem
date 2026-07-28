@@ -11,6 +11,7 @@ using Shared.ResultPattern;
 
 namespace Application.Features.WorkingHours.Commands.UpdateWorkingHour
 {
+    #region UpdateWorkingHourCommand
     public class UpdateWorkingHourCommand : IRequest<Result<UpdateWorkingHourResponse>>
     {
         [JsonIgnore]
@@ -19,4 +20,5 @@ namespace Application.Features.WorkingHours.Commands.UpdateWorkingHour
         public TimeSpan StartTime { get; set; }
         public TimeSpan EndTime { get; set; }
     }
+    #endregion
 }
