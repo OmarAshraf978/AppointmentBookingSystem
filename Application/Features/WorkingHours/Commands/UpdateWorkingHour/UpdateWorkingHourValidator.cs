@@ -7,6 +7,7 @@ using FluentValidation;
 
 namespace Application.Features.WorkingHours.Commands.UpdateWorkingHour
 {
+    #region UpdateWorkingHourValidator
     public class UpdateWorkingHourValidator : AbstractValidator<UpdateWorkingHourCommand>
     {
         public UpdateWorkingHourValidator()
@@ -16,4 +17,5 @@ namespace Application.Features.WorkingHours.Commands.UpdateWorkingHour
             RuleFor(x => x.EndTime).NotEmpty();
         }
     }
+    #endregion
 }
