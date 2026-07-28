@@ -25,6 +25,7 @@ namespace Persistence.Data.DbContexts
         public DbSet<Appointment> Appointments { get; set; }
         public DbSet<Review> Reviews { get; set; }
         public DbSet<Favorite> Favorites { get; set; }
+        public DbSet<WorkingHour> WorkingHours { get; set; }
     }
     #endregion
 }
