@@ -9,6 +9,7 @@ using Shared.ResultPattern;
 
 namespace Application.Features.WorkingHours.Commands.DeleteWorkingHour
 {
+    #region DeleteWorkingHourCommand
     public class DeleteWorkingHourCommand : IRequest<Result<DeleteWorkingHourResponse>>
     {
         public int Id { get; set; }
@@ -17,4 +18,5 @@ namespace Application.Features.WorkingHours.Commands.DeleteWorkingHour
             Id = id;
         }
     }
+    #endregion
 }
