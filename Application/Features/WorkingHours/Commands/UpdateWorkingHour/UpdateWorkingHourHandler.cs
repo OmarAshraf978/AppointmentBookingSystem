@@ -13,6 +13,7 @@ using Shared.ResultPattern;
 
 namespace Application.Features.WorkingHours.Commands.UpdateWorkingHour
 {
+    #region UpdateWorkingHourHandler
     public class UpdateWorkingHourHandler : IRequestHandler<UpdateWorkingHourCommand, Result<UpdateWorkingHourResponse>>
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -65,4 +66,5 @@ namespace Application.Features.WorkingHours.Commands.UpdateWorkingHour
             return _mapper.Map<UpdateWorkingHourResponse>(workingHour);
         }
     }
+    #endregion
 }
