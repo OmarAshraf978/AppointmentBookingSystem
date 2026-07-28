@@ -8,6 +8,7 @@ using FluentValidation;
 
 namespace Application.Features.WorkingHours.Commands.CreateWorkingHour
 {
+    #region CreateWorkingHourValidator
     public class CreateWorkingHourValidator : AbstractValidator<CreateWorkingHourCommand>
     {
         public CreateWorkingHourValidator()
@@ -18,4 +19,5 @@ namespace Application.Features.WorkingHours.Commands.CreateWorkingHour
             RuleFor(x => x.ServiceProviderId).NotEmpty().GreaterThan(0);
         }
     }
+    #endregion
 }
