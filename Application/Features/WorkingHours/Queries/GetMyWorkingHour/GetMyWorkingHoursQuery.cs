@@ -9,7 +9,9 @@ using Shared.ResultPattern;
 
 namespace Application.Features.WorkingHours.Queries.GetMyWorkingHour
 {
+    #region GetMyWorkingHoursQuery
     public class GetMyWorkingHoursQuery : IRequest<Result<IEnumerable<GetMyWorkingHourResponse>>>
     {
     }
+    #endregion
 }
