@@ -12,6 +12,7 @@ using Shared.ResultPattern;
 
 namespace Application.Features.WorkingHours.Commands.DeleteWorkingHour
 {
+    #region DeleteWorkingHourHandler
     public class DeleteWorkingHourHandler : IRequestHandler<DeleteWorkingHourCommand, Result<DeleteWorkingHourResponse>>
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -43,4 +44,5 @@ namespace Application.Features.WorkingHours.Commands.DeleteWorkingHour
             return new DeleteWorkingHourResponse { Message = "Working Hour Deleted Successfully" };
         }
     }
+    #endregion
 }
