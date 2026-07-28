@@ -13,6 +13,7 @@ using Shared.ResultPattern;
 
 namespace Application.Features.WorkingHours.Queries.GetMyWorkingHour
 {
+    #region GetMyWorkingHoursHandler
     public class GetMyWorkingHoursHandler : IRequestHandler<GetMyWorkingHoursQuery, Result<IEnumerable<GetMyWorkingHourResponse>>>
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -46,4 +47,5 @@ namespace Application.Features.WorkingHours.Queries.GetMyWorkingHour
             return Result<IEnumerable<GetMyWorkingHourResponse>>.Ok(response);                                       
         }
     }
+    #endregion
 }
