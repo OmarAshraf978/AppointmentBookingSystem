@@ -11,6 +11,7 @@ using Domain.Entities.Modules;
 
 namespace Application.Features.WorkingHours.Mapping
 {
+    #region WorkingHourProfile
     public class WorkingHourProfile : Profile
     {
         public WorkingHourProfile()
@@ -29,4 +30,5 @@ namespace Application.Features.WorkingHours.Mapping
                 .ForMember(dest => dest.ServiceProviderName, opt => opt.MapFrom(src => src.ServiceProvider.BusinessName));
         }
     }
+    #endregion
 }
