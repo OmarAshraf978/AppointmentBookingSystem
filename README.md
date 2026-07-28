@@ -162,6 +162,35 @@ Appointment Status:
 
 ---
 
+# Working Hours Module
+
+### Features
+
+- Create Working Hours
+- Update Working Hours
+- Delete Working Hours
+- Get My Working Hours (Service Provider)
+- Get Working Hours By Service Provider Id (User, Admin)
+
+### Working Hours Rules
+
+- Only the Service Provider can manage his own working hours.
+- Admin can delete working hours.
+- Service Provider must be approved before adding working hours.
+- Deleted Service Providers cannot manage working hours.
+- Prevent overlapping working hours on the same day.
+- Start time must be earlier than end time.
+- Working hours are linked to the Service Provider.
+
+Each Working Hour contains:
+
+- Day Of Week
+- Start Time
+- End Time
+- Service Provider
+
+---
+
 # Business Rules
 
 - Soft Delete supported.
