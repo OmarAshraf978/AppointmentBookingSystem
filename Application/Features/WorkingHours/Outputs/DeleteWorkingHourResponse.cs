@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace Application.Features.WorkingHours.Outputs
 {
+    #region DeleteWorkingHourResponse
     public class DeleteWorkingHourResponse
     {
         public string Message { get; set; } = null!;
     }
+    #endregion
 }
