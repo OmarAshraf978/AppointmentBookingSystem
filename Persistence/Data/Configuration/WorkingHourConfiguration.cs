@@ -9,6 +9,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Persistence.Data.Configuration
 {
+    #region WorkingHourConfiguration
     public class WorkingHourConfiguration : IEntityTypeConfiguration<WorkingHour>
     {
         public void Configure(EntityTypeBuilder<WorkingHour> builder)
@@ -23,4 +24,5 @@ namespace Persistence.Data.Configuration
                    .OnDelete(DeleteBehavior.Cascade);
         }
     }
+    #endregion
 }
