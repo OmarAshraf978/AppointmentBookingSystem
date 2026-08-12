@@ -10,6 +10,7 @@ using Shared.ResultPattern;
 
 namespace Application.Features.Services.Commands.UpdateService
 {
+    #region UpdateServiceCommand
     public class UpdateServiceCommand : IRequest<Result<UpdateServiceResponse>>
     {
         [JsonIgnore]
@@ -19,4 +20,5 @@ namespace Application.Features.Services.Commands.UpdateService
         public double Price { get; set; }
         public int DurationInMinutes { get; set; }
     }
+    #endregion
 }

@@ -9,10 +9,12 @@ using Shared.ResultPattern;
 
 namespace Application.Features.Authentication.Commands.ChangePassword
 {
+    #region ChangePasswordCommand
     public class ChangePasswordCommand : IRequest<Result<ChangePasswordResponse>>
     {
         public string OldPassword { get; set; } = null!;
         public string NewPassword { get; set; } = null!;
         public string ConfirmPassword { get; set;} = null!;
     }
+    #endregion
 }

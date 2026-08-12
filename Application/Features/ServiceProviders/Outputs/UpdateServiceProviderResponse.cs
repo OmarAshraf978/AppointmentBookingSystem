@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Application.Features.ServiceProviders.Outputs
 {
+    #region UpdateServiceProviderResponse
     public class UpdateServiceProviderResponse
     {
         public int Id { get; set; }
@@ -16,4 +17,5 @@ namespace Application.Features.ServiceProviders.Outputs
         public double Latitude { get; set; }
         public double Longitude { get; set; }
     }
+    #endregion
 }

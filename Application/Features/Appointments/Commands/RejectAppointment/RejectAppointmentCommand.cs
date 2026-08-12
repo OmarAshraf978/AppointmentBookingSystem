@@ -9,6 +9,7 @@ using Shared.ResultPattern;
 
 namespace Application.Features.Appointments.Commands.RejectAppointment
 {
+    #region RejectAppointmentCommand
     public class RejectAppointmentCommand : IRequest<Result<StateResponse>>
     {
         public int Id { get; set; }
@@ -17,4 +18,5 @@ namespace Application.Features.Appointments.Commands.RejectAppointment
             Id = id;
         }
     }
+    #endregion
 }

@@ -11,6 +11,7 @@ using Shared.ResultPattern;
 
 namespace Application.Features.ServiceProviders.Commands.DeleteServiceProvider
 {
+    #region DeleteServiceProviderHandler
     public class DeleteServiceProviderHandler : IRequestHandler<DeleteServiceProviderCommand, Result<DeleteServiceProviderResponse>>
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -34,4 +35,5 @@ namespace Application.Features.ServiceProviders.Commands.DeleteServiceProvider
             return new DeleteServiceProviderResponse { Message = "This Service Provider Is Deleted Successfully" };
         }
     }
+    #endregion
 }

@@ -12,6 +12,7 @@ using Shared.ResultPattern;
 
 namespace Application.Features.ServiceProviders.Queries.GetAllServiceProvider
 {
+    #region GetAllServiceProviderHandler
     public class GetAllServiceProviderHandler : IRequestHandler<GetAllServiceProvidersQuery, Result<IEnumerable<GetAllServiceProvidersResponse>>>
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -31,4 +32,5 @@ namespace Application.Features.ServiceProviders.Queries.GetAllServiceProvider
             return response;
         }
     }
+    #endregion
 }

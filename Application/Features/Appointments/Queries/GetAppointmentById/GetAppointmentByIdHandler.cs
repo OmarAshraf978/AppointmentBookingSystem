@@ -12,6 +12,7 @@ using Shared.ResultPattern;
 
 namespace Application.Features.Appointments.Queries.GetAppointmentById
 {
+    #region GetAppointmentByIdHandler
     public class GetAppointmentByIdHandler : IRequestHandler<GetAppointmentByIdQuery, Result<GetAppointmentByIdResponse>>
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -43,4 +44,5 @@ namespace Application.Features.Appointments.Queries.GetAppointmentById
             return _mapper.Map<GetAppointmentByIdResponse>(appointment);
         }
     }
+    #endregion
 }

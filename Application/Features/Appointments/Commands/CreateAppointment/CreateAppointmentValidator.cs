@@ -7,6 +7,7 @@ using FluentValidation;
 
 namespace Application.Features.Appointments.Commands.CreateAppointment
 {
+    #region CreateAppointmentValidator
     public class CreateAppointmentValidator : AbstractValidator<CreateAppointmentCommand>
     {
         public CreateAppointmentValidator()
@@ -15,4 +16,5 @@ namespace Application.Features.Appointments.Commands.CreateAppointment
             RuleFor(x => x.ServiceId).NotEmpty().GreaterThan(0);
         }
     }
+    #endregion
 }

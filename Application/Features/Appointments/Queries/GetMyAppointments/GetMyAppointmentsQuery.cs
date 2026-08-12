@@ -9,7 +9,9 @@ using Shared.ResultPattern;
 
 namespace Application.Features.Appointments.Queries.GetMyAppointments
 {
+    #region GetMyAppointmentsQuery
     public class GetMyAppointmentsQuery : IRequest<Result<IEnumerable<GetMyAppointmentsResponse>>>
     {
     }
+    #endregion
 }

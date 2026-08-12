@@ -11,6 +11,7 @@ using Shared.ResultPattern;
 
 namespace Application.Features.ServiceProviders.Commands.ApproveServiceProvider
 {
+    #region ApproveServiceProviderHandler
     public class ApproveServiceProviderHandler : IRequestHandler<ApproveServiceProviderCommand, Result<ApproveServiceProviderResponse>>
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -34,4 +35,5 @@ namespace Application.Features.ServiceProviders.Commands.ApproveServiceProvider
             return new ApproveServiceProviderResponse { Message = "Service Provider Approved Successfully" };
         }
     }
+    #endregion
 }

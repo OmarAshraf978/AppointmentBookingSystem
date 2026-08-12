@@ -9,6 +9,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Persistence.Data.Configuration
 {
+    #region ServiceProviderConfiguration
     public class ServiceProviderConfiguration : IEntityTypeConfiguration<ServiceProvider>
     {
         public void Configure(EntityTypeBuilder<ServiceProvider> builder)
@@ -21,4 +22,5 @@ namespace Persistence.Data.Configuration
             builder.HasIndex(x => x.UserId).IsUnique();
         }
     }
+    #endregion
 }

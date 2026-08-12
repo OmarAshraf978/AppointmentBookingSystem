@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Domain.Entities.Modules
 {
+    #region ServiceProviderModule
     public class ServiceProvider
     {
         public int Id { get; set; }
@@ -19,5 +20,7 @@ namespace Domain.Entities.Modules
         public bool IsApproved { get; set; }
         public ICollection<Service> Services { get; set; } = new List<Service>();
         public bool IsDeleted { get; set; }
+        public ICollection<WorkingHour> WorkingHours { get; set; } = new List<WorkingHour>();
     }
+    #endregion
 }

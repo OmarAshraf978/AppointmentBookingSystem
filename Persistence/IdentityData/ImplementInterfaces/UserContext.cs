@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Http;
 
 namespace Persistence.IdentityData.ImplementInterfaces
 {
+    #region UserContext
     public class UserContext : IUserContext
     {
         private readonly IHttpContextAccessor _httpContextAccessor;
@@ -21,4 +22,5 @@ namespace Persistence.IdentityData.ImplementInterfaces
         public string? UserId => _httpContextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
         public string? Role => _httpContextAccessor.HttpContext.User.FindFirst(ClaimTypes.Role).Value!;
     }
+    #endregion
 }

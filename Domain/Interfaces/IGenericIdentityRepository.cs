@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Domain.Interfaces
 {
+    #region IGenericIdentityRepository
     public interface IGenericIdentityRepository<TEntity, TKey> where TEntity : class
     {
         public Task<IEnumerable<TEntity>> GetAllAsync();
@@ -14,4 +15,5 @@ namespace Domain.Interfaces
         public void Update(TEntity entity);
         public void Delete(TEntity entity);
     }
+    #endregion
 }

@@ -11,6 +11,7 @@ using Microsoft.EntityFrameworkCore.Query.Internal;
 
 namespace Application.Features.Authentication.Mapping
 {
+    #region AuthenticationProfile
     public class AuthenticationProfile : Profile
     {
         public AuthenticationProfile()
@@ -20,4 +21,5 @@ namespace Application.Features.Authentication.Mapping
             CreateMap<ApplicationUser, GetCurrentUserResponse>();
         }
     }
+    #endregion
 }

@@ -18,6 +18,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Presentation.Controllers
 {
+    #region ServiceProviderController
     public class ServiceProviderController : ApiBaseController
     {
         private readonly IMediator _mediator;
@@ -84,4 +85,5 @@ namespace Presentation.Controllers
             return HandleResult(Result);
         }
     }
+    #endregion
 }

@@ -9,6 +9,7 @@ using Shared.ResultPattern;
 
 namespace Application.Features.Reviews.Queries.GetReviewsForService
 {
+    #region GetReviewsForServiceQuery
     public class GetReviewsForServiceQuery : IRequest<Result<IEnumerable<GetReviewsForServiceResponse>>>
     {
         public int ServiceId { get; set; }
@@ -17,4 +18,5 @@ namespace Application.Features.Reviews.Queries.GetReviewsForService
             ServiceId = id;
         }
     }
+    #endregion
 }

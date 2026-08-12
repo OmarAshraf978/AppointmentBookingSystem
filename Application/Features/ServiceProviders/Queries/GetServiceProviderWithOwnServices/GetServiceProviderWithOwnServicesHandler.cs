@@ -12,6 +12,7 @@ using Shared.ResultPattern;
 
 namespace Application.Features.ServiceProviders.Queries.GetServiceProviderWithOwnServices
 {
+    #region GetServiceProviderWithOwnServicesHandler
     public class GetServiceProviderWithOwnServicesHandler : IRequestHandler<GetServiceProviderWithOwnServicesQuery, Result<GetServiceProviderWithOwnServicesResponse>>
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -35,4 +36,5 @@ namespace Application.Features.ServiceProviders.Queries.GetServiceProviderWithOw
             return response;
         }
     }
+    #endregion
 }

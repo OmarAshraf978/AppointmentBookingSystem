@@ -9,6 +9,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Persistence.Data.Configuration
 {
+    #region AppointmentConfiguration
     public class AppointmentConfiguration : IEntityTypeConfiguration<Appointment>
     {
         public void Configure(EntityTypeBuilder<Appointment> builder)
@@ -22,4 +23,5 @@ namespace Persistence.Data.Configuration
                    .HasForeignKey(x => x.ServiceId);
         }
     }
+    #endregion
 }

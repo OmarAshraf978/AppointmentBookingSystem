@@ -9,6 +9,7 @@ using Shared.ResultPattern;
 
 namespace Application.Features.ServiceProviders.Commands.CreateServiceProvider
 {
+    #region CreateServiceProviderCommand
     public class CreateServiceProviderCommand : IRequest<Result<CreateServiceProviderResponse>>
     {
         public string BusinessName { get; set; } = default!;
@@ -18,4 +19,5 @@ namespace Application.Features.ServiceProviders.Commands.CreateServiceProvider
         public double Latitude { get; set; }
         public double Longitude { get; set; }
     }
+    #endregion
 }

@@ -8,6 +8,7 @@ using Persistence.IdentityData.DbContexts;
 
 namespace Persistence.IdentityData.ImplementInterfaces
 {
+    #region IdentityUnitOfWork
     public class IdentityUnitOfWork : IIdentityUnitOfWork
     {
         private readonly AppointmentIdentityDbContext _dbContext;
@@ -30,4 +31,5 @@ namespace Persistence.IdentityData.ImplementInterfaces
         }
         public async Task<int> SaveChangesAsync() => await _dbContext.SaveChangesAsync();
     }
+    #endregion
 }

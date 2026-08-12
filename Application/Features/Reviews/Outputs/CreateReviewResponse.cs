@@ -7,6 +7,7 @@ using Domain.Entities.Modules;
 
 namespace Application.Features.Reviews.Outputs
 {
+    #region CreateReviewResponse
     public class CreateReviewResponse
     {
         public int Id { get; set; }
@@ -15,4 +16,5 @@ namespace Application.Features.Reviews.Outputs
         public DateTime CreatedAt { get; set; }
         public int ServiceId { get; set; }
     }
+    #endregion
 }

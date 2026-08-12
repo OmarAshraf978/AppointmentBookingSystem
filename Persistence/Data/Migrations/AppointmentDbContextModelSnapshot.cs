@@ -51,6 +51,31 @@ namespace Persistence.Data.Migrations
                     b.ToTable("Appointments");
                 });
 
+            modelBuilder.Entity("Domain.Entities.Modules.Favorite", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ServiceId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ServiceId");
+
+                    b.HasIndex("UserId", "ServiceId")
+                        .IsUnique();
+
+                    b.ToTable("Favorites");
+                });
+
             modelBuilder.Entity("Domain.Entities.Modules.Review", b =>
                 {
                     b.Property<int>("Id")
@@ -176,10 +201,49 @@ namespace Persistence.Data.Migrations
                     b.ToTable("ServiceProviders");
                 });
 
+            modelBuilder.Entity("Domain.Entities.Modules.WorkingHour", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("DayOfWeek")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<TimeSpan>("EndTime")
+                        .HasColumnType("time");
+
+                    b.Property<int>("ServiceProviderId")
+                        .HasColumnType("int");
+
+                    b.Property<TimeSpan>("StartTime")
+                        .HasColumnType("time");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ServiceProviderId");
+
+                    b.ToTable("WorkingHours");
+                });
+
             modelBuilder.Entity("Domain.Entities.Modules.Appointment", b =>
                 {
                     b.HasOne("Domain.Entities.Modules.Service", "Service")
                         .WithMany("Appointments")
+                        .HasForeignKey("ServiceId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Service");
+                });
+
+            modelBuilder.Entity("Domain.Entities.Modules.Favorite", b =>
+                {
+                    b.HasOne("Domain.Entities.Modules.Service", "Service")
+                        .WithMany("Favorites")
                         .HasForeignKey("ServiceId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -209,9 +273,22 @@ namespace Persistence.Data.Migrations
                     b.Navigation("ServiceProvider");
                 });
 
+            modelBuilder.Entity("Domain.Entities.Modules.WorkingHour", b =>
+                {
+                    b.HasOne("Domain.Entities.Modules.ServiceProvider", "ServiceProvider")
+                        .WithMany("WorkingHours")
+                        .HasForeignKey("ServiceProviderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ServiceProvider");
+                });
+
             modelBuilder.Entity("Domain.Entities.Modules.Service", b =>
                 {
                     b.Navigation("Appointments");
+
+                    b.Navigation("Favorites");
 
                     b.Navigation("Reviews");
                 });
@@ -219,6 +296,8 @@ namespace Persistence.Data.Migrations
             modelBuilder.Entity("Domain.Entities.Modules.ServiceProvider", b =>
                 {
                     b.Navigation("Services");
+
+                    b.Navigation("WorkingHours");
                 });
 #pragma warning restore 612, 618
         }

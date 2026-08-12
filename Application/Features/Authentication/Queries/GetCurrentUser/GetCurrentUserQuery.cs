@@ -9,7 +9,9 @@ using Shared.ResultPattern;
 
 namespace Application.Features.Authentication.Queries.GetCurrentUser
 {
+    #region GetCurrentUserQuery
     public class GetCurrentUserQuery : IRequest<Result<GetCurrentUserResponse>>
     {
     }
+    #endregion
 }

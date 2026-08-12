@@ -15,6 +15,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Presentation.Controllers
 {
+    #region AuthenticationController
     public class AuthenticationController : ApiBaseController
     {
         private readonly IMediator _mediator;
@@ -54,4 +55,5 @@ namespace Presentation.Controllers
             return HandleResult(Result);
         }
     }
+    #endregion
 }

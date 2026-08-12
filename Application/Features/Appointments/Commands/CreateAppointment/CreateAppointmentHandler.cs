@@ -12,6 +12,7 @@ using Shared.ResultPattern;
 
 namespace Application.Features.Appointments.Commands.CreateAppointment
 {
+    #region CreateAppointmentHandlerUpdated
     public class CreateAppointmentHandler : IRequestHandler<CreateAppointmentCommand, Result<CreateAppointmentResponse>>
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -50,15 +51,33 @@ namespace Application.Features.Appointments.Commands.CreateAppointment
             var start = request.AppointmentDate;
             var end = start.AddMinutes(service.DurationInMinutes);
 
-            var appointments = await _unitOfWork.GetRepository<Appointment, int>()
-                                                .GetAllBySpecificColumnAsync(x => x.ServiceId == request.ServiceId &&
-                                                                            (x.Status == AppointmentStatus.Pending ||
-                                                                             x.Status == AppointmentStatus.Approved));
+            var workingHours = await _unitOfWork.GetRepository<WorkingHour, int>()
+                                                .GetAllBySpecificColumnAsync(x => x.ServiceProviderId == service.ServiceProviderId
+                                                                          && x.DayOfWeek == request.AppointmentDate.DayOfWeek.ToString());
+            if (!workingHours.Any())
+                return Error.Failure("The Service Provider Is Not Available On This Day.");
 
+            var appointmentStartTime = request.AppointmentDate.TimeOfDay;
+            var appointmentEndTime = appointmentStartTime.Add(TimeSpan.FromMinutes(service.DurationInMinutes));
+
+            var isWithinWorkingHours = workingHours.Any(x =>
+                appointmentStartTime >= x.StartTime &&
+                appointmentEndTime <= x.EndTime);
+
+            if (!isWithinWorkingHours)
+                return Error.Failure("The Appointment Time Is Outside The Service Provider's Working Hours.");
+
+            var appointments = await _unitOfWork.GetRepository<Appointment, int>()
+                                                .GetAllBySpecificColumnWithIncludeAsync(x => x.Service.ServiceProviderId == service.ServiceProviderId &&
+                                                                            (x.Status == AppointmentStatus.Pending ||
+                                                                             x.Status == AppointmentStatus.Approved),
+                                                                             x => x.Service);
+
+            
             var hasConflict = appointments.Any(x =>
             {
                 var existingStart = x.AppointmentDate;
-                var existingEnd = existingStart.AddMinutes(service.DurationInMinutes);
+                var existingEnd = existingStart.AddMinutes(x.Service.DurationInMinutes);
                 return start < existingEnd && end > existingStart;
             });
             if (hasConflict)
@@ -81,4 +100,5 @@ namespace Application.Features.Appointments.Commands.CreateAppointment
 
         }
     }
+    #endregion
 }

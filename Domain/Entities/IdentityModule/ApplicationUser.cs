@@ -8,9 +8,11 @@ using Microsoft.Extensions.Primitives;
 
 namespace Domain.Entities.IdentityModule
 {
+    #region ApplicationUserModule
     public class ApplicationUser : IdentityUser
     {
         public string DisplayName { get; set; } = null!;
         public Address? Address { get; set; } 
     }
+    #endregion
 }

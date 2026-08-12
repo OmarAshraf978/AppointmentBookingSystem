@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace Application.Features.ServiceProviders.Outputs
 {
+    #region DeleteServiceProviderResponse
     public class DeleteServiceProviderResponse
     {
         public string Message { get; set; } = null!;
     }
+    #endregion
 }

@@ -7,6 +7,7 @@ using FluentValidation;
 
 namespace Application.Features.Reviews.Commands.CreateReview
 {
+    #region CreateReviewValidator
     public class CreateReviewValidator : AbstractValidator<CreateReviewCommand>
     {
         public CreateReviewValidator()
@@ -16,4 +17,5 @@ namespace Application.Features.Reviews.Commands.CreateReview
             RuleFor(x => x.ServiceId).NotEmpty().GreaterThan(0);
         }
     }
+    #endregion
 }

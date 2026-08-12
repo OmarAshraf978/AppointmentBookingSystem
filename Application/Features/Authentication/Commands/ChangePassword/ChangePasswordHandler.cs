@@ -13,6 +13,7 @@ using Shared.ResultPattern;
 
 namespace Application.Features.Authentication.Commands.ChangePassword
 {
+    #region ChangePasswordHandler
     public class ChangePasswordHandler : IRequestHandler<ChangePasswordCommand, Result<ChangePasswordResponse>>
     {
         private readonly UserManager<ApplicationUser> _userManager;
@@ -39,4 +40,5 @@ namespace Application.Features.Authentication.Commands.ChangePassword
             };
         }
     }
+    #endregion
 }

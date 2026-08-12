@@ -11,6 +11,7 @@ using Shared.ResultPattern;
 
 namespace Application.Features.Reviews.Commands.DeleteReview
 {
+    #region DeleteReviewHandler
     public class DeleteReviewHandler : IRequestHandler<DeleteReviewCommand, Result<DeleteReviewResponse>>
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -48,4 +49,5 @@ namespace Application.Features.Reviews.Commands.DeleteReview
             return new DeleteReviewResponse { Message = "Review deleted Successfully" };
         }
     }
+    #endregion
 }

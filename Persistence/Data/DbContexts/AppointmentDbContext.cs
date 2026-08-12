@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Persistence.Data.DbContexts
 {
+    #region AppointmentDbContext
     public class AppointmentDbContext : DbContext
     {
         public AppointmentDbContext(DbContextOptions<AppointmentDbContext> options):base(options)
@@ -23,5 +24,8 @@ namespace Persistence.Data.DbContexts
         public DbSet<ServiceProvider> ServiceProviders { get; set; }
         public DbSet<Appointment> Appointments { get; set; }
         public DbSet<Review> Reviews { get; set; }
+        public DbSet<Favorite> Favorites { get; set; }
+        public DbSet<WorkingHour> WorkingHours { get; set; }
     }
+    #endregion
 }

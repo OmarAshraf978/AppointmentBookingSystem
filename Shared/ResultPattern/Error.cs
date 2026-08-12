@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Shared.ResultPattern
 {
+    #region ErrorResultPattern
     public class Error
     {
         public string Code { get; }
@@ -42,5 +43,6 @@ namespace Shared.ResultPattern
             return new Error(code, description, ErrorTypes.InvalidCredentials);
         }
     }
+    #endregion
 }
 

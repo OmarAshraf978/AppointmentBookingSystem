@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Application.Features.Authentication.Outputs
 {
+    #region LoginResponse
     public class LoginResponse
     {
         public string DisplayName { get; set; } = null!;
@@ -14,4 +15,5 @@ namespace Application.Features.Authentication.Outputs
 
         public string Token { get; set; } = null!;
     }
+    #endregion
 }

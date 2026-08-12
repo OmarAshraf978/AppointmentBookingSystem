@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.Json;
 
 namespace Domain.Entities.Modules
 {
+    #region ServiceModule
     public class Service
     {
         public int Id { get; set; }
@@ -20,5 +21,7 @@ namespace Domain.Entities.Modules
         public ServiceProvider ServiceProvider { get; set; } = null!;
         public ICollection<Appointment> Appointments { get; set; } = new List<Appointment>();
         public ICollection<Review> Reviews { get; set; } = new List<Review>();
+        public ICollection<Favorite> Favorites { get; set; } = new List<Favorite>();
     }
+    #endregion
 }

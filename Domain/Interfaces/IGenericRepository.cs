@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Domain.Interfaces
 {
+    #region IGenericRepository
     public interface IGenericRepository<TEntity, TKey> where TEntity : class
     {
         public Task<IEnumerable<TEntity>> GetAllAsync();
@@ -21,4 +22,5 @@ namespace Domain.Interfaces
         public Task<TEntity?> GetBySpecificColumnWithIncludeAsync(Expression<Func<TEntity, bool>> predicate, params Expression<Func<TEntity, object>>[] includes);
         public Task<IEnumerable<TEntity>> GetAllBySpecificColumnWithIncludeAsync(Expression<Func<TEntity, bool>> predicate, params Expression<Func<TEntity, object>>[] includes);
     }
+    #endregion
 }

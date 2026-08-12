@@ -10,6 +10,7 @@ using Shared.ResultPattern;
 
 namespace Application.Features.Authentication.Commands.Register
 {
+    #region RegisterCommand
     public class RegisterCommand :IRequest<Result<RegisterResponse>>
     {
         public string DisplayName { get; set; } = null!;
@@ -23,4 +24,5 @@ namespace Application.Features.Authentication.Commands.Register
         public string FirstName { get; set; } = default!;
         public string LastName { get; set; } = default!;
     }
+    #endregion
 }

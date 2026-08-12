@@ -10,6 +10,7 @@ using Shared.ResultPattern;
 
 namespace Application.Features.ServiceProviders.Commands.UpdateServiceProvider
 {
+    #region UpdateServiceProviderCommand
     public class UpdateServiceProviderCommand : IRequest<Result<UpdateServiceProviderResponse>>
     {
         [JsonIgnore]
@@ -21,4 +22,5 @@ namespace Application.Features.ServiceProviders.Commands.UpdateServiceProvider
         public double Latitude { get; set; }
         public double Longitude { get; set; }
     }
+    #endregion
 }

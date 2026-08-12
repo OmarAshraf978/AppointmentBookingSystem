@@ -12,6 +12,7 @@ using Shared.ResultPattern;
 
 namespace Application.Features.Reviews.Queries.GetReviewsForService
 {
+    #region GetReviewsForServiceHandler
     public class GetReviewsForServiceHandler : IRequestHandler<GetReviewsForServiceQuery, Result<IEnumerable<GetReviewsForServiceResponse>>>
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -48,4 +49,5 @@ namespace Application.Features.Reviews.Queries.GetReviewsForService
             return _mapper.Map<List<GetReviewsForServiceResponse>>(availableReviews);
         }
     }
+    #endregion
 }

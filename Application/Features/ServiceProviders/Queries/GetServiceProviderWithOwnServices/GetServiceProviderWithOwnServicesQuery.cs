@@ -9,7 +9,9 @@ using Shared.ResultPattern;
 
 namespace Application.Features.ServiceProviders.Queries.GetServiceProviderWithOwnServices
 {
+    #region GetServiceProviderWithOwnServicesQuery
     public class GetServiceProviderWithOwnServicesQuery : IRequest<Result<GetServiceProviderWithOwnServicesResponse>>
     {
     }
+    #endregion
 }

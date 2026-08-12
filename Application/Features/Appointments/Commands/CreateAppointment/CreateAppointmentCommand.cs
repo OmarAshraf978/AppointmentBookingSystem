@@ -9,9 +9,11 @@ using Shared.ResultPattern;
 
 namespace Application.Features.Appointments.Commands.CreateAppointment
 {
+    #region CreateAppointmentCommand
     public class CreateAppointmentCommand : IRequest<Result<CreateAppointmentResponse>>
     {
         public DateTime AppointmentDate { get; set; }
         public int ServiceId { get; set; }
     }
+    #endregion
 }

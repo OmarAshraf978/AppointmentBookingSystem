@@ -9,6 +9,7 @@ using Shared.ResultPattern;
 
 namespace Application.Features.ServiceProviders.Commands.ApproveServiceProvider
 {
+    #region ApproveServiceProviderCommand
     public class ApproveServiceProviderCommand : IRequest<Result<ApproveServiceProviderResponse>>
     {
         public int Id { get; set; }
@@ -17,4 +18,5 @@ namespace Application.Features.ServiceProviders.Commands.ApproveServiceProvider
             Id = id;
         }
     }
+    #endregion
 }

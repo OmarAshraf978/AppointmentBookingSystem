@@ -20,6 +20,7 @@ using Persistence.IdentityData.ImplementInterfaces;
 
 namespace Appointment.Solution
 {
+    #region MainProgram
     public class Program
     {
         public static void Main(string[] args)
@@ -105,4 +106,5 @@ namespace Appointment.Solution
             app.Run();
         }
     }
+    #endregion
 }

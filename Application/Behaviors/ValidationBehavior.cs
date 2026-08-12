@@ -8,6 +8,7 @@ using MediatR;
 
 namespace Application.Behaviors
 {
+    #region ValidationBehavior
     public class ValidationBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> where TRequest : notnull
     {
         private readonly IEnumerable<IValidator<TRequest>> _validators;
@@ -37,4 +38,5 @@ namespace Application.Behaviors
             return await next();
         }
     }
+    #endregion
 }

@@ -11,6 +11,7 @@ using Shared.ResultPattern;
 
 namespace Application.Features.Appointments.Commands.CancelAppointment
 {
+    #region CancelAppointmentHandler
     public class CancelAppointmentHandler : IRequestHandler<CancelAppointmentCommand, Result<StateResponse>>
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -42,4 +43,5 @@ namespace Application.Features.Appointments.Commands.CancelAppointment
             return new StateResponse { Message = "Appointment Canceled Successfully" };
         }
     }
+    #endregion
 }

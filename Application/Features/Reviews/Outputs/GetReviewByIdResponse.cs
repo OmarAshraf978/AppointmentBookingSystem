@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Application.Features.Reviews.Outputs
 {
+    #region GetReviewByIdResponse
     public class GetReviewByIdResponse
     {
         public int Id { get; set; }
@@ -15,4 +16,5 @@ namespace Application.Features.Reviews.Outputs
         public int ServiceId { get; set; }
         public string ServiceName { get; set; } = null!;
     }
+    #endregion
 }

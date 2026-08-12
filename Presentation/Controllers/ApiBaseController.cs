@@ -11,6 +11,7 @@ using Shared.ResultPattern;
 
 namespace Presentation.Controllers
 {
+    #region ApiBaseController
     [ApiController]
     [Route("api/[controller]")]
     public class ApiBaseController : ControllerBase
@@ -71,4 +72,5 @@ namespace Presentation.Controllers
             _ => StatusCodes.Status500InternalServerError
         };
     }
+    #endregion
 }
