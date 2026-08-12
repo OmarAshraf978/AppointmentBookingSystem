@@ -12,7 +12,7 @@ using Shared.ResultPattern;
 
 namespace Application.Features.Appointments.Commands.CreateAppointment
 {
-    #region CreateAppointmentHandler
+    #region CreateAppointmentHandlerUpdated
     public class CreateAppointmentHandler : IRequestHandler<CreateAppointmentCommand, Result<CreateAppointmentResponse>>
     {
         private readonly IUnitOfWork _unitOfWork;
